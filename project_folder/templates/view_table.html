@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Database</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+
+    th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>College Database</h1>
+
+  <h2>Table: {{ table_name }}</h2>
+
+  <table>
+    <tr>
+      {% for column_name in data[0] %}
+        <th>{{ column_name }}</th>
+      {% endfor %}
+    </tr>
+    {% for row in data %}
+      <tr>
+        {% for value in row %}
+          <td>{{ value }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

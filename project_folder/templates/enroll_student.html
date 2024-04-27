@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enroll Student</title>
+</head>
+<body>
+  <h1>Enroll Student</h1>
+
+  <form action="/enroll_student" method="POST">
+    <label for="student_id">Student ID:</label>
+    <input type="text" name="student_id" id="student_id" required>
+
+    <label for="course_id">Course ID:</label>
+    <input type="text" name="course_id" id="course_id" required>
+
+    <label for="grade">Grade:</label>
+    <input type="text" name="grade" id="grade" required>
+
+    <input type="submit" value="Enroll Student">
+  </form>
+
+  {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+  {% endif %}
+</body>
+</html>
